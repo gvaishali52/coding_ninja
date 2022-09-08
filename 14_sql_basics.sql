@@ -35,4 +35,23 @@ values 	(1,'Shah', 'Math', 'shah@xyz.com'),
 		(3,'Dahiya', 'English', 'dahiya@xyz.com'),
 		(4,'Gairols', 'Science', 'gairols@xyz.com');
         
+alter table Students add (DateofBirth varchar(100));
+
+update Students set DateofBirth = '2000'where RollNumber = 12;
+update Students set DateofBirth = '2000'where RollNumber = 25;
+
+# drop the new column
+alter table Students drop column DateofBirth; 
+
+alter table Students add (DateofBirth varchar(100) default '2000-02-12');
+select * from Students;
+
+desc Students;
+
+
+alter table Students modify DateofBirth date;
+alter table Students modify DateofBirth datetime;
+
+
+alter table Students drop column ContactNumber; 
 
