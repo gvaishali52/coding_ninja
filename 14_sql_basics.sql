@@ -55,3 +55,10 @@ alter table Students modify DateofBirth datetime;
 
 alter table Students drop column ContactNumber; 
 
+# RENAME A COLUMN
+
+alter table Students change Name FullName varchar(100);
+
+select Name from Faculties limit 1;
+
+show tables;
